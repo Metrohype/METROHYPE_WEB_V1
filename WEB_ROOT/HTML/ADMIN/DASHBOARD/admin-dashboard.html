@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrohype | Dashboard</title>
     <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <link rel="stylesheet" href="../../../PLUGINS/IGNORED-CSS/admin-ignored.css">
+    <link rel="stylesheet" href="../../../CSS/ADMIN/admin.css">
     <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
     <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -27,19 +29,19 @@
 
             <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
                 <div class="space-y-3">
-                    <a href="#"
-                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
+                    <a href="admin-dashboard.html"
+                        class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
                         <i class="fa-solid fa-table-cells-large"></i>
                         <p class="">Dashboard</p>
                     </a>
 
-                    <a href="#"
+                    <a href="../JOB/CompletedJobs.html"
                         class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
                         <i class="fa fa-check"></i>
                         <p>Complete Jobs</p>
                     </a>
 
-                    <a href="#"
+                    <a href="../../ADVERTISER/TRANSACTIONS/view-user-transaction.html"
                         class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
                         <i class="fa fa-chart-simple"></i>
                         <p>My Transactions</p>
@@ -47,27 +49,27 @@
                 </div>
 
                 <div class="space-y-3">
-                    <a href="#"
+                    <a href="../ORDER/order.html"
                         class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
                         <i class="fa fa-briefcase"></i>
                         <p>Orders</p>
                     </a>
 
-                    <a href="#"
+                    <a href="../WALLET/load-wallet.html"
                         class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
                         <i class="fa fa-credit-card"></i>
                         <p>Load Wallet</p>
                     </a>
                 </div>
 
-                <a href="#"
+                <a href="../BLOGS/blog.html"
                     class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
                     <i class="fa-solid fa-table-cells"></i>
                     <p>Blog</p>
                 </a>
 
                 <div class="space-y-3">
-                    <a href="#"
+                    <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
                         class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
                         <i class="fa-solid fa-user"></i>
                         <p>My Account</p>
@@ -103,7 +105,7 @@
             <nav
                 class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static">
                 <div class="flex float-right">
-                    <a href="#" class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
+                    <a href="../../SHARED/VIEW ACCOUNT/view-account.html" class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
                         <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
                         <div class="flex font-[inter] text-gray-700 font-[500]">
                             <p class="text-md ">
@@ -122,7 +124,7 @@
             <section class="w-[100vw] lg:w-[80vw] h-auto pb-20 bg-[#2a3f541a] z-0 px-4 lg:px-10">
 
                 <div
-                    class="content_container w-[100%] h-[30vh] md:h-[20vh] rounded-b-[20px] md:pl-20 lg:pl-6 mx-auto bg-no-repeat bg-center px-6  pt-28 md:py-48 lg:py-20">
+                    class="content_container  w-[100%] h-[30vh] md:h-[20vh] rounded-b-[20px] md:pl-20 lg:pl-6 mx-auto bg-no-repeat bg-center px-6  pt-28 md:py-48 lg:py-20">
                     <div class="flex text-white space-x-3 text-xl md:text-2xl items-center font-medium">
                         <i class="fa fa-user"></i>
                         <div class="flex md:flex-row flex-col">
@@ -173,41 +175,11 @@
                 <!-- Simple Card  on mobile Screen-->
 
                 <div class="lg:hidden mt-10">
-                    <div id="cardsContainer" class="flex md:flex-col  w-full">
-
-                        <!-- Card 1 -->
-                        <div
-                            class="card w-[100%] lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Wallet Balance</p>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid text-2xl">₦</i>
-                                <p class="text-2xl mt-1">0</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div
-                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Total Orders</p>
-                            <p class="text-2xl mt-1">0</p>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div
-                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Total Referral</p>
-                            <p class="text-2xl mt-1">0</p>
-                        </div>
-                    </div>
+                    <div id="cardsContainer" class="flex md:flex-col w-full carousel"></div>
 
                     <!-- Dot Indicators -->
-                    <div class="lg:hidden flex justify-center items-center mt-6">
-                        <div class="dot-pagination flex space-x-2">
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"
-                                data-index="0"></span>
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="1"></span>
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="2"></span>
-                        </div>
+                    <div class="lg:hidden flex justify-center items-center mt-6 dots">
+                        <div class="dot-pagination flex space-x-2 dots"></div>
                     </div>
                 </div>
 
@@ -307,75 +279,7 @@
         </div>
     </div>
 
-    <script>
-        function menuClick() {
-            let menu = document.getElementById("menu");
-            let sidebar = document.getElementById("sidebar")
-
-            if (sidebar.classList.contains("hidden")) {
-                sidebar.classList.remove("hidden");
-
-            } else {
-
-                sidebar.classList.add("hidden");
-            }
-        }
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.card');
-            const dots = document.querySelectorAll('.dot');
-            let currentIndex = 0;
-            let intervalId;
-
-            // Function to show the current card and update the dots
-            function updatePagination(index) {
-                // Hide all cards and reset dot colors
-                cards.forEach((card, i) => {
-                    card.classList.add('hidden');
-                    dots[i].classList.remove('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
-                    dots[i].classList.add('bg-gray-400');
-                });
-
-                // Show the selected card and update the corresponding dot
-                cards[index].classList.remove('hidden');
-                dots[index].classList.add('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
-                dots[index].classList.remove('bg-gray-400');
-
-                // Update the current index
-                currentIndex = index;
-            }
-
-            // Function to switch cards automatically every 3 seconds
-            function autoSwitchCards() {
-                currentIndex = (currentIndex + 1) % cards.length;
-                updatePagination(currentIndex);
-            }
-
-            // Add click event listeners to each dot for manual card switching
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', function () {
-                    updatePagination(index);  // Show the card corresponding to the clicked dot
-
-                    // Restart auto-switching after manual click
-                    clearInterval(intervalId);  // Clear the previous interval
-                    intervalId = setInterval(autoSwitchCards, 10000);  // Restart auto-switching
-                });
-            });
-
-            // Initial setup: show the first card on load
-            updatePagination(currentIndex);
-
-            // Start auto-switching on smaller screens only
-            if (window.innerWidth < 1024) {
-                intervalId = setInterval(autoSwitchCards, 10000);
-            }
-        });
-
-
-
-
-    </script>
+    <script src="../../../JS/ADMIN/DASHBOARD/admin-dahboard.js"></script>
 </body>
 
 </html>
