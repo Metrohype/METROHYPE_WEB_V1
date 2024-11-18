@@ -1,20 +1,11 @@
+
 const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
-const sidebarToggle = document.getElementById('sidebarToggle');
-
-
-sidebarToggle.addEventListener('click', () => {
-  if (sidebar.classList.contains('-translate-x-full')) {
-    sidebar.classList.remove('-translate-x-full');
-    overlay.classList.remove('hidden');
-  } else {
-    sidebar.classList.add('-translate-x-full');
-    overlay.classList.add('hidden');
-  }
-});
-
-
-
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    
+    // Toggle sidebar visibility on button click
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+    });
 // Initialize CKEditor
 ClassicEditor.create(document.querySelector('#post-content')).catch((error) => {
   console.error(error);
