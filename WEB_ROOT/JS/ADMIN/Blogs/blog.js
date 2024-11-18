@@ -1,14 +1,19 @@
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+const sidebarToggle = document.getElementById('sidebarToggle');
 
-function menuClick() {
-  let menu = document.getElementById('menu');
-  let sidebar = document.getElementById('sidebar');
 
-  if (sidebar.classList.contains('hidden')) {
-    sidebar.classList.remove('hidden');
+sidebarToggle.addEventListener('click', () => {
+  if (sidebar.classList.contains('-translate-x-full')) {
+    sidebar.classList.remove('-translate-x-full');
+    overlay.classList.remove('hidden');
   } else {
-    sidebar.classList.add('hidden');
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
   }
-}
+});
+
+
 
 // Initialize CKEditor
 ClassicEditor.create(document.querySelector('#post-content')).catch((error) => {
