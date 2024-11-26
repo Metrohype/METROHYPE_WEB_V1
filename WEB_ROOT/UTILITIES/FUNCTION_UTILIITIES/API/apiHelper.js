@@ -5,6 +5,7 @@ export async function LoginAdvertiser(email, password) {
     try {
         const result = await AdvertiserLogin(email, password);
         console.log(result);
+        return result;
     } catch (error) {
         console.error("Error creating advertiser:", error);
     }
@@ -15,6 +16,7 @@ export async function RegisterAdvertiser (advertiserFirstName, advertiserLastNam
     try {
         const result = await CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) ;
         console.log(result);
+        return result;
     } catch (error) {
         console.error("Error creating advertiser:", error);
     }
