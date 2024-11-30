@@ -26,10 +26,10 @@ body {
 .fade-up {
   animation: fade-up 1.5s ease-in-out forwards;
 }
-/*   
+  
 #sidebar::-webkit-scrollbar {
     display: none;
-  } */
+  }
 
   #sidebar {
     -ms-overflow-style: none; 
