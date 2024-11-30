@@ -1,10 +1,11 @@
 import { AdvertiserLogin,CreateAdvertiser,GetAllAdvertisers } from "../../API_UTILITIIES/apiFunctions.js";
-
+import { STORAGE, STORAGE_TYPE } from "../../BASE_UTILITIES/storageHelper.js";
 
 export async function LoginAdvertiser(email, password) {
     try {
         const result = await AdvertiserLogin(email, password);
         console.log(result);
+        STORAGE.set("userData",result,STORAGE_TYPE.LOCAL);
         return result;
     } catch (error) {
         console.error("Error creating advertiser:", error);

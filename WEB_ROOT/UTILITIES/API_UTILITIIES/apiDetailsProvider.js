@@ -12,7 +12,7 @@ export const API_ROUTES = {
     },
     ADVERTISER: {
         REGISTER: "/API/ADVERTISERS/CREATE",
-        LOGIN: "/API/ADVERTISERS/LOGIN",
+        LOGIN: "/API/v1/AUTH/LOGIN",
         GET_ALL: "/API/ADVERTISERS/GETALL",
         GET_BY_ID: "/API/ADVERTISERS/GETBYID/{ID}",
         UPDATE: "/API/ADVERTISERS/UPDATE/{ID}",
@@ -57,8 +57,8 @@ export const API_PAYLOAD_FACTORY = {
 
     },
     ADVERTISER: {
-        LOGIN: (email, password) => ({
-            email:email,
+        LOGIN: (usernameOrEmail, password) => ({
+            usernameOrEmail:usernameOrEmail,
             password:password
         }),
 
