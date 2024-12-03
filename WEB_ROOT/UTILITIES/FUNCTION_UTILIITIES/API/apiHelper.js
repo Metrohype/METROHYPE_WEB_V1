@@ -1,9 +1,9 @@
 import { AdvertiserLogin,CreateAdvertiser,GetAllAdvertisers } from "../../API_UTILITIIES/apiFunctions.js";
 
 
-export async function LoginAdvertiser(email, password) {
+export async function LoginAdvertiser(usernameOrEmail, password) {
     try {
-        const result = await AdvertiserLogin(email, password);
+        const result = await AdvertiserLogin(usernameOrEmail, password);
         console.log(result);
         return result;
     } catch (error) {

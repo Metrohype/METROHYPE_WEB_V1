@@ -11,12 +11,12 @@ export const API_ROUTES = {
 
     },
     ADVERTISER: {
-        REGISTER: "/API/ADVERTISERS/CREATE",
-        LOGIN: "/API/ADVERTISERS/LOGIN",
-        GET_ALL: "/API/ADVERTISERS/GETALL",
-        GET_BY_ID: "/API/ADVERTISERS/GETBYID/{ID}",
-        UPDATE: "/API/ADVERTISERS/UPDATE/{ID}",
-        DELETE: "/API/ADVERTISERS/DELETE/{ID}"
+        REGISTER: "/API/USERS/{userType}/CREATE",
+        LOGIN: "/API/V1/AUTH/LOGIN",
+        GET_ALL: "/API/USERS/GET",
+        GET_BY_ID: "/API/USERS/GET/{ID}",
+        UPDATE: "/API/{ID}",
+        DELETE: "/API/{ID}"
     },
     FREELANCER: {
 
@@ -36,7 +36,7 @@ export const API_PAYLOAD = {
     },
     ADVERTISER: {
         LOGIN: {
-            email: "",
+            usernameOrEmail: "",
             password: ""
         }
     },
@@ -57,8 +57,8 @@ export const API_PAYLOAD_FACTORY = {
 
     },
     ADVERTISER: {
-        LOGIN: (email, password) => ({
-            email:email,
+        LOGIN: (usernameOrEmail, password) => ({
+            usernameOrEmail:usernameOrEmail,
             password:password
         }),
 

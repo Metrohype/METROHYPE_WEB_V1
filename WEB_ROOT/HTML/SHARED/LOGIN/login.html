@@ -161,7 +161,7 @@
             const usenamePattern = /^[a-zA-Z0-9_]{3,}$/;
             if (!emailPattern.test(email) && !phonePattern.test(email)
                 && !usenamePattern.test(email)) {
-                showNotification("Invalid Email or Phone Number", "error");
+                showNotification("Invalid Email or username", "error");
                 return;
             }
             // PASSWORD VALIDATION NOT NECCESSARY IN THIS CONTEXT
@@ -178,8 +178,8 @@
                 if (response) {
 
                     showNotification("Login Successfully");
-                    window.location =
-                        "https://metrohype-web-v1.onrender.com/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
+                    // window.location =
+                    //     "https://metrohype-web-v1.onrender.com/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
                 } else {
                     showNotification("Login Failed", "error");
                 }
