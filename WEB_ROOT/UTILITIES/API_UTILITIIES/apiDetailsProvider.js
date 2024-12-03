@@ -11,12 +11,14 @@ export const API_ROUTES = {
 
     },
     ADVERTISER: {
+ feature/api-login
         REGISTER: "/API/USERS/{userType}/CREATE",
         LOGIN: "/API/V1/AUTH/LOGIN",
         GET_ALL: "/API/USERS/GET",
         GET_BY_ID: "/API/USERS/GET/{ID}",
         UPDATE: "/API/{ID}",
         DELETE: "/API/{ID}"
+
     },
     FREELANCER: {
 
@@ -57,6 +59,7 @@ export const API_PAYLOAD_FACTORY = {
 
     },
     ADVERTISER: {
+ feature/api-login
         LOGIN: (usernameOrEmail, password) => ({
             usernameOrEmail:usernameOrEmail,
             password:password

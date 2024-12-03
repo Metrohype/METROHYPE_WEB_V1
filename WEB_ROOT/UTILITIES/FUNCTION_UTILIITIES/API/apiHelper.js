@@ -14,6 +14,7 @@ export async function LoginAdvertiser(usernameOrEmail, password) {
 
 export async function RegisterAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword)  {
     try {
+        
         const result = await CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) ;
         console.log(result);
     } catch (error) {
