@@ -11,7 +11,7 @@ export const API_ROUTES = {
 
     },
     ADVERTISER: {
-        REGISTER: "/API/USERS/ADVERTISER/CREATE",
+        REGISTER: "/api/Users/Advertiser/Create",
         LOGIN: "/API/ADVERTISERS/LOGIN",
         GET_ALL: "/API/ADVERTISERS/GETALL",
         GET_BY_ID: "/API/ADVERTISERS/GETBYID/{ID}",

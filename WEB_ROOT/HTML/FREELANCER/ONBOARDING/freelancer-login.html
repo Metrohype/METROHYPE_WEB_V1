@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
-    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
-    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-       @keyframes fade-up {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+  <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+  <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Load notification script -->
+  <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+  <style>
+    @keyframes fade-up {
       0% {
         opacity: 0;
-        transform: translateY(100px); 
+        transform: translateY(100px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     @keyframes nav-down {
       0% {
         opacity: 0;
         transform: translateY(-20px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -33,102 +39,141 @@
     .nav-down {
       animation: button-down 1.5s ease forwards;
     }
+
     .fade-up {
       animation: fade-up 1.5s ease-in-out forwards;
     }
+
     .picture {
       animation: fade-up 1.9s ease-in-out forwards;
     }
-    </style>
+  </style>
 </head>
+
 <body class="flex flex-col min-h-screen overflow-x-hidden">
-    <header>
-        <nav id="big" class="w-screen bg-white z-50 lg:bg-white h-20 shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around">
-            <div class="flex items-center space-x-2">
-              <i class="fa fa-earth text-gray-500"></i>
-              <a href="/" class="text-gray-700 text-[21px] font-semibold font-[inter]">Metrohyp</a>
-            </div>
-    
-            <div class="gap-x-14 lg:flex items-center hidden text-text-color font-medium">
-                <a href="../../SHARED/LANDING-PAGE/landing-page.html" class=" hover:text-blue-300">Home</a>
-                <a href="/" class=" hover:text-blue-300">Blog</a>
-                <a href="/" class=" hover:text-blue-300">API</a>
-                <a href="../../ADMIN/ONBOARDING/admin-login.html" class=" hover:text-blue-300">Login</a>
-                <a href="./freelancer-login.html"><button
-                  class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelance</button>
-                </a>
-                <a href="../../ADVERTISER/ONBOARDING/register.html">
-                  <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise on Metrohyp</button>
-                </a>
-            </div>
-            <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu" aria-label="Toggle menu">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </nav>
-    
-        <!-- mobile view -->
-        <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
-            <div class="relative bg-white h-80 flex flex-col flex-grow mt-20 gap-y-6 p-4">
-                <a href="./freelancer-login.html">Home</a>
-                <a href="/">Blog</a>
-                <a href="/">API</a>
-                <a href="../../ADMIN/ONBOARDING/admin-login.html">Login</a>
-                <a href="./freelancer-login.html">
-                  <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
-                </a>
-                <a href="../../ADVERTISER/ONBOARDING/register.html">
-                  <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on Metrohyp</button>
-                </a>
-            </div>
+  <header>
+    <nav id="big"
+      class="w-screen bg-white z-50 lg:bg-white h-20 shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around">
+      <div class="flex items-center space-x-2">
+        <i class="fa fa-earth text-gray-500"></i>
+        <a href="/" class="text-gray-700 text-[21px] font-semibold font-[inter]">Metrohyp</a>
+      </div>
+
+      <div class="gap-x-14 lg:flex items-center hidden text-text-color font-medium">
+        <a href="../../SHARED/LANDING-PAGE/landing-page.html" class=" hover:text-blue-300">Home</a>
+        <a href="/" class=" hover:text-blue-300">Blog</a>
+        <a href="/" class=" hover:text-blue-300">API</a>
+        <a href="../../ADMIN/ONBOARDING/admin-login.html" class=" hover:text-blue-300">Login</a>
+        <a href="./freelancer-login.html"><button
+            class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelance</button>
+        </a>
+        <a href="../../ADVERTISER/ONBOARDING/register.html">
+          <button
+            class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise
+            on Metrohyp</button>
+        </a>
+      </div>
+      <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu" aria-label="Toggle menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+
+    <!-- mobile view -->
+    <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
+      <div class="relative bg-white h-80 flex flex-col flex-grow mt-20 gap-y-6 p-4">
+        <a href="./freelancer-login.html">Home</a>
+        <a href="/">Blog</a>
+        <a href="/">API</a>
+        <a href="../../ADMIN/ONBOARDING/admin-login.html">Login</a>
+        <a href="./freelancer-login.html">
+          <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
+        </a>
+        <a href="../../ADVERTISER/ONBOARDING/register.html">
+          <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on Metrohyp</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main
+    class="flex flex-col mt-36 px-4 md:flex-row sm:px-9 items-center justify-center gap-x-14 container mx-[auto] max-w-[1200px]">
+    <div class="md:self-start self-center picture">
+      <img src="../../../ASSETS/metro2.webp" alt="">
+    </div>
+    <div class="flex flex-col sm:container sm:mx-auto items-center md:w-[50%] fade-up">
+      <div class="space-y-2  justify-center flex-col items-center">
+        <h1 class="text-center text-4xl">Earn on Metrohyp</h1>
+        <p class="text-center md:w-80 lg:w-[520px] md:text-center">Become a worker on Metrohyp and Earn up to 5000 daily
+          by completing gigs or tasks</p>
+        <div class="border-b-2 border-blue-400 w-14 mx-auto mt-2"></div>
+      </div>
+
+      <form class="fade-up mt-6" id="registrationForm">
+
+        <div class="flex flex-col md:flex-row items-center gap-6 ">
+          <input type="text" placeholder="Firstname"
+            class="w-[100%] md:w-[50%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="firstname" required>
+
+          <input type="text" placeholder="Lastname"
+            class="w-[100%] md:w-[50%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="lastname" required>
+        </div><br>
+
+        <input type="email" placeholder="Email" class="w-[100%] md:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700" id="email" required><br>
+
+        <div class="flex flex-col md:flex-row items-center gap-6 my-6">
+          <input type="text" placeholder="Username"
+            class="w-[100%] md:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="username" required>
+          
+          <input type="text" placeholder="Phone Number"
+            class="w-[100%] md:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="phoneNumber" required>
         </div>
-    </header>
-    
-    <main class="flex flex-col mt-36 px-4 md:flex-row sm:px-9 lg:flex-row items-center justify-center container mx-[auto] max-w-[1200px]">
-        <div class="lg:self-start self-center picture">
-            <img src="../../../ASSETS/metro2.webp" alt="">
+        <div class="flex flex-col md:flex-row items-center gap-6 my-6">
+          <input type="password" placeholder="Password"
+            class="w-[100%] md:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="password" required>
+          
+          <input type="password" placeholder="Retype password"
+            class="w-[100%] md:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700"
+            id="confirmPassword" required>
         </div>
-        <div class="flex flex-col sm:container sm:mx-auto items-center lg:w-[50%] fade-up">
-            <div class="space-y-2  justify-center flex-col items-center">
-                <h1 class="text-center text-4xl">Earn on Metrohyp</h1>
-                <p class="text-center md:w-80 lg:w-[520px] md:text-center">Become a worker on Metrohyp and Earn up to 5000 daily by completing gigs or tasks</p>
-                <div class="border-b-2 border-blue-400 w-14 mx-auto mt-2"></div>
-            </div>
-            
-            <form class="fade-up flex flex-col gap-y-4 mt-9 mb-10 sm:grid sm:grid-cols-2 sm:gap-5 sm:px-6 lg:grid-cols-2 lg:grid lg:gap-5">
-                <input type="text" placeholder="Full Name" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <input type="email" placeholder="Email" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <input type="text" placeholder="Phone Number" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <input type="text" placeholder="Username" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <input type="password" placeholder="Password" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <input type="password" placeholder="Retype password" class="w-[80vw] sm:w-56 md:w-36 lg:w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
-                <select name="" id="" class="w-[100%] sm:w-[95%] lg:w-[100%] md:w-80 h-10 rounded-md border-[1px] text-stone-400 border-stone-300 sm:col-span-2 outline-blue-700">
-                    <option value="" disabled selected>Select Payment Method</option>
-                    <option value="">Paystack</option>
-                    <option value="">Fluterwave</option>
-                </select>
-                <button class=" fade-up[100%] sm:w-[60%] md:w-80 h-10 rounded-md p-2 bg-stone-300 mt-4 place-self-center col-span-2">Pay N1000 Registration Fee</button>
-            </form>
-            <div class="sm:w-[60%] self-center fade-up">
-                <img src="../../../ASSETS/paystack.png" alt="" >
-            </div>
-        </div>
-    </main>
 
-    <footer class="bg-slate-800 text-white w-screen h-40 mt-6 flex items-center justify-center">
-        <p>© 2020 Metrohyp. All rights reserved.</p>
-    </footer>
+        <select name="paymentMethod" id=""
+          class="w-[100%] h-10 rounded-md border-[1px] text-stone-400 border-stone-300 sm:col-span-2 outline-blue-700">
+          <option value="" disabled selected>Select Payment Method</option>
+          <option value="">Paystack</option>
+          <option value="">Fluterwave</option>
+        </select>
+        <button type="submit"
+          class=" fade-up w-[100%] my-6 h-10 rounded-md p-2 bg-stone-300 mt-4 mx-auto col-span-2">Pay
+          N1000 Registration Fee</button>
+      </form>
+      <div class="sm:w-[60%] self-center fade-up">
+        <img src="../../../ASSETS/paystack.png" alt="">
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-800 text-white w-screen h-40 mt-6 flex items-center justify-center">
+    <p>© 2020 Metrohyp. All rights reserved.</p>
+  </footer>
 
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        const menuBtn = document.getElementById('menu');
-        const mobileMenu = document.getElementById('mobile-nav');
-      
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          big.classList.toggle('shadow-md');
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-nav');
 
-        });
-    </script>
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      big.classList.toggle('shadow-md');
+
+    });
+  </script>
+  <script type="module" src="../../../JS/FREELANCER/freelancer.js"></script>
 </body>
+
 </html>
