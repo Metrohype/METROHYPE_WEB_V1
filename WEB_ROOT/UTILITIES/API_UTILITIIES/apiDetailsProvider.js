@@ -62,14 +62,14 @@ export const API_PAYLOAD_FACTORY = {
             password:password
         }),
 
-        CREATE: (FirstName, LastName,UserName,PhoneNumber,EmailAddress,Password,ConfirmPassword) => ({
-            firstName:FirstName,
-            lastName:LastName,
-            email:EmailAddress,
-            username:UserName,
-            phoneNumber:PhoneNumber,
-            password:Password,
-            confirmPassword:ConfirmPassword,
+        REGISTER: (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) => ({
+            firstName:advertiserFirstName,
+            lastName:advertiserLastName,
+            username:advertiserUserName,
+            phoneNumber:advertiserPhoneNumber,
+            email:advertiserEmailAddress,
+            password:advertiserPassword,
+            confirmPassword:advertiserConfirmPassword,
         }),
     },
     FREELANCER: {

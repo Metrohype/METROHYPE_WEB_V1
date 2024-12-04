@@ -17,6 +17,7 @@ export async function RegisterAdvertiser (advertiserFirstName, advertiserLastNam
         
         const result = await CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) ;
         console.log(result);
+        return result;
     } catch (error) {
         console.error("Error creating advertiser:", error);
     }
